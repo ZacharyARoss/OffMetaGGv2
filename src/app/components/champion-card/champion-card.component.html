@@ -1,0 +1,12 @@
+<div [class]="'card'">
+    <img [class]="'champion-image'" [src]="champion.image_url" alt="">
+    <span [class]="'champion-name'">{{champion?.champion_name}}</span>
+    <div [class]="'champion-win-rate'">
+        <span>Win Rate: </span>
+        <span>{{formatWinPercentage(champion.win,champion.play)+'%'}}</span>
+    </div>
+    <div [class]="'champion-pick-rate'">
+        <span>Pick Rate: </span>
+        <span>{{formatPickRate(champion.pick_rate)+'%'}}</span>
+    </div>
+</div>

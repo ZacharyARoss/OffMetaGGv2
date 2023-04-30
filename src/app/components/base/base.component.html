@@ -1,4 +1,9 @@
 <h1>Off Meta GG</h1>
+<nav [class]="'roles-selection'">
+    <a *ngFor="let role of roles" [routerLink]="'/role/' + role">
+        <button>{{role}}</button>
+    </a>
+</nav>
 <main>
     <router-outlet></router-outlet>
 </main>

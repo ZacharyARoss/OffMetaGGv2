@@ -1,6 +1,3 @@
 <p></p>
 <app-login *ngIf="showLoginPage"></app-login>
 <button [class]="'login-button'" (click)="goToLoginPage()"> {{showLoginPage ? 'Logged in' : 'Login'}}</button>
-<div [class]="'roles-selection'">
-    <button *ngFor="let role of roles" (click)="navigateToRole(role)">{{role}}</button>
-</div>

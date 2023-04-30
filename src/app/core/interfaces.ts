@@ -13,5 +13,6 @@ pick_rate:number;
 ban_rate:number;
 ward:number;
 champion_name:string;
+role?:string;
 image_url:string;
 }
