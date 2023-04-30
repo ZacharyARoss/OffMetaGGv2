@@ -29,8 +29,6 @@ public getStatistics():Observable<IChamptionData[]>{
     image_url:"https://opgg-static.akamaized.net/images/lol/champion/LeeSin.png"}]).pipe(tap((apiResponse:IChamptionData[]) => {this.apiStats=apiResponse}));
   //this.http.get('https://league-of-legends-champions.p.rapidapi.com/statics', {period: 'month',
   //tier: 'Challenger'}, {});
-  //this.http.get('/statics', {period: 'month',
-  //tier: 'Challenger'}, {});
   return this.apiObservable;
 }
 }

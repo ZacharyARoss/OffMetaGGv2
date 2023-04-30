@@ -6,9 +6,9 @@ import { LoginComponent } from './components/login/login.component';
 import { OffmetarecommendationComponent } from './components/offmetarecommendation/offmetarecommendation.component';
 import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
-    {path: '.', component: HomepageComponent, pathMatch: 'full'},
+    {path: '.', component: HomepageComponent, pathMatch: 'full'}, //pathMatch means that the path has to be exactly this variable.
     {path: 'login', component: LoginComponent},
-    {path: 'sign-up', component: SignupComponent},
+    {path: 'sign-up', component: SignupComponent}, //notice here no pathMatch full. so "signup/insert-anything" would still route back to sign up
     {path: 'role/:role', component: OffmetarecommendationComponent},
     {path: 'top', redirectTo: 'role/top', pathMatch: 'full'},
     {path: 'jungle', redirectTo: 'role/jungle', pathMatch: 'full'},
@@ -21,8 +21,8 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)  // .../#/crisis-center/
+    RouterModule.forRoot(routes)  // passing in our routes variable so angular can iterate over the array
   ],
 exports: [RouterModule]
 })
-export class RoutingModule { } 
+export class RoutingModule {} 
