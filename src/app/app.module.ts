@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { LoginComponent } from './components/login/login.component';
+import { OffmetarecommendationComponent } from './components/offmetarecommendation/offmetarecommendation.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { RoutingModule } from './app.routing';
+import { BaseComponent } from './components/base/base.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    HomepageComponent,
+    LoginComponent,
+    OffmetarecommendationComponent,
+    SignupComponent,
+    BaseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [BaseComponent]
 })
 export class AppModule { }
